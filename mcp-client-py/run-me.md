@@ -8,7 +8,7 @@ SERVER_PATH=/Users/dazzagreenwood/filesystem/dist/index.js
 ALLOWED_DIRECTORY=/Users/dazzagreenwood/mcp-hello/module1/files
 ````
 
-Now let's set up and test the client:
+Now let's set up and test the MCP client:
 
 1. First, create the project directory and files if you haven't already:
 ```bash
