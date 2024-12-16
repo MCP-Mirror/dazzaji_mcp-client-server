@@ -45,16 +45,16 @@ async def main():
             await session.initialize()
 
             # List available tools
-            tools = await session.list_tools()
-            print("\nAvailable tools:", [tool.name for tool in tools])
+            tools_response = await session.list_tools()
+            print("Available tools:", [tool.name for tool in tools_response.tools])
             
             # If tool and args are provided, call the specified tool
             if args.tool and args.args:
                 try:
                     tool_args = json.loads(args.args)
                     result = await session.call_tool(
-                        name=args.tool,
-                        arguments=tool_args
+                        name = args.tool,
+                        arguments = tool_args
                     )
                     print(f"\n{args.tool} result:", result)
                 except json.JSONDecodeError:
@@ -73,6 +73,8 @@ async def main():
                     }
                 )
                 print('Write file result:', create_file_result)
+            print("done.")
+
 
 if __name__ == "__main__":
-    asyncio.run(main()) 
+    asyncio.run(main())

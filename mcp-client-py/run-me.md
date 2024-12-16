@@ -23,6 +23,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+2.5 Go to mcp-client-py directory
+
 3. Run the client in default mode to test write_file:
 ```bash
 python client.py
